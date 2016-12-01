@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en-US">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -15,8 +18,9 @@
         <link rel='stylesheet' id='promogear-jquery-fullpage-css'  href='wp-content/themes/promo-gear/assets/css/jquery.fullPage3a05.css?ver=4.2.2' type='text/css' media='all' />
         <link rel='stylesheet' id='promogear-main-styles-css'  href='wp-content/themes/promo-gear/assets/css/style3a05.css?ver=4.2.2' type='text/css' media='all' />
         <link rel='stylesheet' href="css/res.css">
-		<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"-->
-
+        <!-- bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
         <!--hospitality-->
         <link rel="stylesheet" type="text/css" href="css/hospi/tabs.css" />
         <link rel="stylesheet" type="text/css" href="css/hospi/tabstyles.css" />
@@ -29,27 +33,6 @@
             }                
             h1, .h1 {font-family: Miso;font-size: 56px;font-weight: 400;color: #d73e4d;text-transform: uppercase;text-align: inherit;margin-top: 0px;margin-bottom: 15px;}h2, .h2 {font-family: Miso;font-size: 48px;font-weight: 400;color: #d73e4d;text-transform: uppercase;text-align: inherit;margin-top: 0px;margin-bottom: 15px;}h3, .h3 {font-family: Miso;font-size: 40px;font-weight: 400;color: #d73e4d;text-transform: uppercase;text-align: inherit;margin-top: 0px;margin-bottom: 15px;}h4, .h4 {font-family: Miso;font-size: 32px;font-weight: 400;color: #d73e4d;text-transform: uppercase;text-align: inherit;margin-top: 0px;margin-bottom: 15px;}h5, .h5 {font-family: Miso;font-size: 24px;font-weight: 400;color: #d73e4d;text-transform: uppercase;text-align: inherit;margin-top: 0px;margin-bottom: 15px;}h6, .h6 {font-family: Miso;font-size: 19px;font-weight: 700;color: #d73e4d;text-transform: uppercase;text-align: inherit;margin-top: 0px;margin-bottom: 15px;}a {font-family: Lato;font-size: 18px;text-transform: none;}a {color: #d73e4d}a:hover {color: #d73e4d}a:active {color: #d73e4d}.btn {padding-top:6px;padding-bottom:6px;padding-left:30px;padding-right:30px;}.btn.btn-sm {padding-top:2px;padding-bottom:2px;padding-left:20px;padding-right:20px;}.btn.btn-lg {padding-top:6px;padding-bottom:6px;padding-left:40px;padding-right:40px;}p {margin-top:0px;margin-bottom:30px;}blockquote {border-left-width:1px;border-color:#d73e4d;padding-top:0px;padding-bottom:0px;padding-left:20px;padding-right:0px;}table th, table td {padding-top:1px;padding-bottom:1px;padding-left:1px;padding-right:1px;}
         </style>
-		<style type="text/css">
-    
-    @media only screen and (min-width:985px){
-        .fstyle
-		{
-		padding:22px;
-		}
-    }
-    @media only screen and (max-width:985px){
-        .fstyle
-		{
-		padding:18px;
-		}
-	@media only screen and (max-width:750px){
-        .fstyle
-		{
-		padding:12px;
-		}
-    }
-        
-</style>
         <!-- font awesome -->
         <link type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
@@ -70,6 +53,7 @@
             }
             };
             xmlhttp.open("GET", url, true);
+            xmlhttp.setRequestHeader('origin', 'http');
             xmlhttp.send();
             
         </script>
@@ -134,10 +118,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-3 col-sm-4 col-md-4 logo-box" id="two"><img src="img/k orange white.png" style="margin-left: 10px; height: auto; margin-top: 5px; width: 75%;">
+                            <div class="col-xs-3 col-sm-4 logo-box" id="two"><img src="img/k orange white.png" style="margin-left: 10px; height: auto; margin-top: 5px; width: 75%;">
                             </div>
                             <div class="col-xs-3 col-sm-4 logo-box" id="three">								
-                                <img src="img/unesco white and blue.png" style=" height: auto;width: 60%;margin-top: -15px;margin-right:-200px;">								
+                                <img src="img/unesco white and blue.png" style=" height: auto;width: 60%;margin-top: -15px;margin-left:200px;">								
                             </div>
                         </div>
                     </div>
@@ -272,7 +256,7 @@
             <!-- .section -->
             <!-- events and workshops -->
             <section class="section  random"
-                data-background-image="img/events.jpg"
+                data-background-image="img/events.gif"
                 data-background="rgba(255,247,204,0.80)"
                 data-shadow=""
                 data-nav-color="#d73e4d"
@@ -371,7 +355,7 @@
             <!-- .section -->
             <!-- initiatives -->
             <section class="section  random"
-                data-background-image="img/highlights.gif"
+                data-background-image="img/init.jpg"
                 data-background="rgba(255,247,204,0.80)"
                 data-shadow=""
                 data-nav-color="#d73e4d"
@@ -387,26 +371,9 @@
                             <div class="row section-title-block">
                                 <h1 class="col-sm-8 section-title" data-appear-animation="fadeInLeftBig" data-appear-animation-delay="500">Initiatives</h1>
                             </div>
-						
-							<div class="row">
-  <div class="col-sm-6">
-    <div class="card card-block" style="background:rgba(191,218,210,0.6);">
-      <h3 class="card-title">NEON RUN</h3>
-      <p style="color:#000;" class="card-text">With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">REGISTER</a>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card card-block" style="background:rgba(191,218,210,0.6);">
-      <h3 class="card-title">E FOR EDUCATE</h3>
-      <p style="color:#000;" class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">REGISTER</a>
-    </div>
-  </div>
-</div>
                             <!-- .section-title-block -->
                             <!--neon run-->                            
-                            <!--div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
                                 <a href="#" class="work"
                                     data-id="128"
                                     data-link=""
@@ -419,8 +386,10 @@
                                     </div>
                                     <div style="width:400px; height:auto;" class="hover"><i class="fa fa-arrows-alt"></i></div>
                                     <h3 class="title">NEON RUN</h3>
-                                </a>                                
+                                </a>
+                                <!-- .work -->
                             </div>
+                            <!--e for educate-->
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <a href="#" class="work"
                                     data-id="128"
@@ -435,7 +404,8 @@
                                     <div style="width:400px; height:auto;" class="hover"><i class="fa fa-arrows-alt"></i></div>
                                     <h3 class="title">E FOR EDUCATE</h3>
                                 </a>
-                            </div-->
+                                <!-- .work -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -444,7 +414,7 @@
             <!-- .section -->
             <!--Xceed-->
             <section class="section  random"
-                data-background-image="img/xceed.jpg"
+                data-background-image="img/xceed.gif"
                 data-background="rgba(10, 79, 67, 0.870588)"
                 data-shadow=""
                 data-nav-color="#d73e4d"
@@ -456,15 +426,16 @@
                 <div class="section-content ">
                     <div class="container section-wrap"
                         style="">
-                            <h3 class="section-title"  data-appear-animation="fadeInDown" data-appear-animation-delay="100">Xceed</h3>
-                            <p style="color:#fff; font-size:16px; margin-left:30px; text-align:justify;">
-                                Distance must not be a barrier to spreading knowledge. Transcending geographical boundaries, Xceed serves as miniature version of Kurukshetra encompassing interesting events and workshops. Apart from bagging lots of prizes, the winners of Xceed get the enviable opportunity to be a part of the grand final stage at Kurukshetra. Quite simply, XCEED provides those beyond our state borders the chance to experience Kurukshetra first hand. Since 2008, XCEED has visited some of the top institutions in our country. We have hosted XCEED in a lot of colleges.<br/><br/>                                
-                            </p>
-							<h4 style="color:rgb(255, 247, 204);" data-appear-animation="fadeInDown" data-appear-animation-delay="100">Battle of Bots</h4>
-                            <p style="color:#fff; font-size:16px; margin-left:30px;">
-                               Distance must not be a barrier to spreading knowledge. Transcending geographical boundaries, Xceed serves as miniature version of Kurukshetra encompassing interesting events and workshops. Apart from bagging lots of prizes, the winners of Xceed get the enviable opportunity to be a part of the grand final stage at Kurukshetra.<br/><br/>                                
-                            </p>
-							<h5 style="color:#fff;">For more details check out our website: <a href="xceed.kurukshetra.org.in" style="color:rgb(255,247,204);"><b><i><u>XCEED@KURUKSHETRA.ORG.IN</u></i></b></a></h5>
+                        <h3 class="section-title"  data-appear-animation="fadeInDown" data-appear-animation-delay="100">Xceed</h3>
+                        <p style="color:#fff; font-size:16px; margin-left:30px; text-align:justify;">
+                            Distance must not be a barrier to spreading knowledge. Transcending geographical boundaries, Xceed serves as miniature version of Kurukshetra encompassing interesting events and workshops. Apart from bagging lots of prizes, the winners of Xceed get the enviable opportunity to be a part of the grand final stage at Kurukshetra. Quite simply, XCEED provides those beyond our state borders the chance to experience Kurukshetra first hand. Since 2008, XCEED has visited some of the top institutions in our country. We have hosted XCEED in a lot of colleges.<br/><br/>
+                            <!--For more details check out our website:<br/>
+                                <a href="xceed.kurukshetra.org.in" style="color:#fff; font-size:20px;">xceed.kurukshetra.org.in</a>-->
+                        </p>
+                        <h4 style="color:rgb(255, 247, 204);" data-appear-animation="fadeInDown" data-appear-animation-delay="100">Battle of Bots</h4>
+                        <p style="color:#fff; font-size:16px; margin-left:30px;">
+                            Distance must not be a barrier to spreading knowledge. Transcending geographical boundaries, Xceed serves as miniature version of Kurukshetra encompassing interesting events and workshops. Apart from bagging lots of prizes, the winners of Xceed get the enviable opportunity to be a part of the grand final stage at Kurukshetra.<br/><br/>                                
+                        </p>
                     </div>
                 </div>
                 <!-- .section-content -->
@@ -472,7 +443,7 @@
             <!-- .section -->
             <!--Hospitality-->
             <section class="section  random"
-                data-background-image="img/hospi.jpg"
+                data-background-image="img/hospi.gif"
                 data-background="rgba(10, 79, 67, 0.870588)"
                 data-shadow=""
                 data-nav-color="#d73e4d"
@@ -588,9 +559,38 @@
                 </div>
                 <!-- .section-content -->
             </section>
+            <!-- theme -->
+            <section class="section  random"
+                data-background-image="img/gl.gif"
+                data-background="rgba(35,184,158,0.80)"
+                data-shadow=""
+                data-nav-color="#d73e4d"
+                data-nav-color-text=""
+                data-color="#ffffff"
+                data-title-color="#fff7cc"
+                data-title="Theme"
+                data-anchor="theme">
+                <div class="section-content ">
+                    <div class="container section-wrap"
+                        style="">
+                        <h1 class="section-title text-center"  data-appear-animation="fadeInDown" data-appear-animation-delay="100">Our Theme</h1>
+                        <div class="card card-outline-warning text-xs-center">
+                            <div class="card-block">
+                                <blockquote class="card-blockquote">
+                                    <blockquote class="text-left">
+                                        <h3>Climate Change</h3>
+                                    </blockquote>
+                                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .section-content -->
+            </section>
             <!-- footer and contact -->
-            <section class="section random"
-                data-background-image="img/footer.jpg"
+            <section class="section  random"
+                data-background-image="img/footer.gif"
                 data-background=""
                 data-shadow=""
                 data-nav-color=""
@@ -599,7 +599,7 @@
                 data-title-color=""
                 data-title="Footer"
                 data-anchor="footer">
-                <div class="section-content " >
+                <div class="section-content ">
                     <div class="container section-wrap"
                         style="">
                         <div class="row section-title-block">
@@ -630,7 +630,7 @@
                     </div>
                 </div>
                 <!-- .section-content -->
-                <footer class="site-footer fstyle" style="background-color: #fff;">
+                <footer class="site-footer" style="background-color: #fff;padding:12px;">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6 left-align">
@@ -682,7 +682,7 @@
                         </ul>
                         <div class="tab-content" style="border:none">
                             <div id="login" class="tab-pane fade in active">
-                                <form id="login">
+                                <form>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                         <input id="email" type="text" class="form-control" name="email" placeholder="Email">
@@ -697,33 +697,38 @@
                                 </form>
                             </div>
                             <div id="register" class="tab-pane fade">
-                                <form id="register">
+                                <form id="register" method="post" action="register.php">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                         <input id="name" type="text" class="form-control" name="name" placeholder="Your name">
                                     </div>
                                     <br>
-									<div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock" style="width:16px;"></i></span>
-                                        <input id="pass" type="password" class="form-control" name="pass" placeholder="Your password (atleast 6 characters long)"  onblur="validatepass()">										
-                                    </div>
-									<span style="color:red;" id="passerror" > </span>
-                                    <br>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-phone" style="width:16px;"></i></span>
-                                        <input id="phone" type="text" class="form-control" name="phone" placeholder="Your mobile number" onblur="validatephone()">
+                                        <input id="phone" type="text" class="form-control" name="contactNumber" placeholder="Your mobile number">
                                     </div>
-									<span style="color:pink; font-style:italic;" id="phoneerror" > </span>
                                     <br>							
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                        <input id="email" type="email" class="form-control" name="email" placeholder="Your email-id" onblur="validatemail()">
+                                        <input id="email" type="text" class="form-control" name="emailId" placeholder="Your email-id">
                                     </div>
-									<span style="color:red;" id="mailerror" > </span>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                                    </div>
+                                    <br/>
+                                    <div class="input-group radio">
+                                        Gender:
+                                        <label class="radio-inline">
+                                        <input type="radio" name="gender"  value="M"> Male
+                                        </label>
+                                        <label class="radio-inline">
+                                        <input type="radio" name="gender" value="F"> Female
+                                        </label>
+                                    </div>
                                     <br>
                                     <div class="form-group college">
-										<select id="collegeNames">
-										</select>
                                     </div>
                                     <div class="form-group courses">
                                     </div>
@@ -731,7 +736,7 @@
                                     </div>
                                     <div class="form-group year">
                                     </div>
-                                    <button type="submit" class="btn btn-default" onclick="validateForm();">REGISTER</button>
+                                    <button type="submit" class="btn btn-default">REGISTER</button>
                                 </form>
                             </div>
                         </div>
@@ -761,25 +766,27 @@
                                         <input id="email" type="text" class="form-control" name="email" placeholder="Your email-id">
                                     </div>
                                     <br>
-                                    <div class="form-group sacollege">
+                                    <div class="form-group college">
                                     </div>
-                                    <div class="form-group sacourses">
+                                    <div class="form-group courses">
                                     </div>
-                                    <div class="form-group sadegree">
+                                    <div class="form-group degree">
                                     </div>
-                                    <div class="form-group sayear">
+                                    <div class="form-group year">
                                     </div>
                                     <button type="submit" class="btn btn-default">REGISTER AS STUDENT AMBASSDOR</button>
                                 </form>
+                                <br/>
                                 <div class="oldreglink"><a>Already registered as student ambassdor?</a></div>
                             </div>
                         </center>
                         <div class="main clearfix oldreg" style="display:none;">
                             <div class="back">
                                 <a>
-                                    <h4>&nbsp;&nbsp;<i class="fa fa-angle-double-left"></i>&nbsp;Back</h4>
+                                    <p>&nbsp;&nbsp;<i class="fa fa-arrow-left"></i>&nbsp;Back</p>
                                 </a>
                             </div>
+                            <br/>
                             <center>
                                 <form style="width:90%;">
                                     <div class="input-group">
@@ -826,7 +833,7 @@
                                     <h5><i class="fa fa-empire hospi_icon"></i>&nbsp;Cyclotron</h5>
                                 </a>
                             </li>
-                       </ul>
+                        </ul>
                         <div class="tab-content" style="border:none">
                             <div id="ceg" class="tab-pane fade in active">
                                 <p>College of Engineering, Guindy, is the oldest engineering college in the country. Started in May, 1794 as a School of Survey and established as a college in 1859 under the Madras University, CEG has been a reservoir of technical excellence ever since its inception. At CEG, learning is a passion; excellence is the endeavour and knowledge, the goal.</p>
@@ -844,13 +851,53 @@
                     </div>
                 </div>
             </div>
-            
+            <!--neon run-->
+            <div id="neonrun" class="modal fade">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" style="color: rgb(255,255,255);" >NEON RUN</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h6 class="desc">Exclusive designs, unique and clear functionality of the templates are created here. The company produces exclusive creative products such as online stores templates, one page promo sites, graphic works and corporate style for the wide audienExclusive designs, unique and clear functionality of the templates are created here. The company produces exclusive creative products such as online stores templates, one page promo sites, graphic works and corporate style for the wide audienExclusive designs, unique and clear functionality of the templates are created here. The company produces exclusive creative products such as online stores templates, one page promo sites, graphic works and corporate style for the wide audienExclusive designs, unique and clear .</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--e for educate-->
+            <div id="eforeducate" class="modal fade">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" style="color: rgb(255,255,255);" >E FOR EDUCATE</h4>
+                        </div>
+                        <div class="modal-body" style="max-height:500px;overflow:auto;">
+                            <h6 class="desc">E-for-Educate, an e-waste drive with a charitable twist is being undertaken by CEG Tech Forum - the technical hub of the College of Engineering, Guindy, Anna University. CTF is the pillar of Kurukshetra 2016, which is an international techno-management fest under the patronage of UNESCO. What do we plan to do? Seen Wall-E? If you have, you know what we plan to do. And if you haven't, well, our aim is to spread awareness about the indiscriminate disposal and dumping of e-waste.<br/><br/>
+                                Didn't many of us toss our Samsung Galaxy Note 3 when Note 4 came out? 'Fess up. You did :P With technology advancing by lightyears in nanoseconds, don't we tend to change our gadgets every year? Switching from CRT to LCD and from LED to 3D and 3D to 4K. Where do you think all our discarded gizmos go? In the dumpyards, overflowing landfills and lakesides. You must have seen the humongous pile of garbage that was unearthed during the Chennai floods. All our devil-may-care attitude has led to accumulation of e-waste of unmanageable proportions. We, comrades, have created a gigantic metal monster and I'm not talking about Iron Man.<br/><br/>
+                                That's one half of our initiative. The other side tackles the alarming rate of school dropouts.<br/><br/>
+                                We're considered one of the smartest people in the world but how much do we actually care about educating our kids and making sure that they stay through? About 1.4 million children in India in the age group of 6-11 drop out. This alarming fact is based on the UNESCO's Education for All(EFA) Global Monitoring Report on out of school populations.<br/><br/>
+                                It is time to act.<br/><br/>
+                                YOU can help. Yes, You sitting there and reading this. Don't just read it, forget it and walk away. This is your earth and your life as much as the other seven billion people on the planet. Taking baby steps to disposing our e-waste responsible is a move towards a greener, safer environment.<br/><br/>
+                                The funds raised through the initiative would be used to support schooling for underprivileged children.<br/><br/>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- .main -->
         <!-- random color -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/randomColorMaster.js"></script>
+        <!-- bootstrap -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
         <script>
             $(document).ready(function randomBackground(){
             	num2 = 0.8;
@@ -878,20 +925,12 @@
         <script type="text/javascript" src="js/about/jquery.crotator.js"></script>
         <script src="js/hospi/cbpFWTabs.js"></script>
         <script src="js/list.js"></script>
-        <script type="text/javascript" src="js/about/jquery.mousewheel.js"></script>
-		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-		<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script-->
-		
-		<!--registration validation-->
-		<script type="text/javascript" src="js/register.js"></script>
-		<script text="text/javascript">
-		$("#owl-demo").owlCarousel({
-    navigation : true
-  });
-  </script>
+        <!-- <script type="text/javascript" src="js/about/jquery.mousewheel.js"></script> -->
         <script type="text/javascript">
             $(window).load(function(){
             	$('#cr-container').crotator();
+            	populateForm();
+            	
             });
         </script>
         <script type='text/javascript'>
@@ -930,7 +969,24 @@
             	$(".oldreg").hide();
             	$(".newreg").show();			
             });
-        </script>
+        </script>								
     </body>
-    <!-- Mirrored from wordpress.promo-gear.itembridge.com/5/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Nov 2016 15:45:57 GMT -->
 </html>
+<?php
+    if(isset($_SESSION['registration']))
+    {
+    	if($_SESSION['registration'] == "failure")
+    	{
+    	?>
+			<script>alert('Your registration failed');</script>
+		<?php
+		}
+		else if($_SESSION['registration'] == "success")
+		{
+		?>
+			<script>alert('<?php echo $_SESSION['user_id'] ?>');</script>
+		<?php
+		}
+		//unset($_SESSION['registration']);
+    }
+?>
